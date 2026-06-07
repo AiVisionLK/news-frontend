@@ -22,7 +22,7 @@ export default function ArticlePage() {
   const [adCountdown, setAdCountdown] = useState(5);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/articles/${slug}`)
+    axios.get(`http://16.171.149.70:3000/api/articles/${slug}`)
       .then(res => {
         setArticle(res.data);
         setLoading(false);
@@ -50,7 +50,6 @@ export default function ArticlePage() {
 
   return (
     <div className="min-h-screen bg-gray-950 text-white">
-
       {adVisible && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90">
           <div className="bg-gray-900 rounded-2xl p-8 max-w-lg w-full mx-4 border border-gray-700 text-center">
@@ -112,7 +111,7 @@ export default function ArticlePage() {
         <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 mb-8 text-center">
           <p className="text-gray-500 text-xs uppercase tracking-widest mb-2">Advertisement</p>
           <div className="bg-gradient-to-r from-green-600 to-teal-600 rounded-lg p-4">
-            <p className="text-white font-bold">Banner Ad — Your Product Here</p>
+            <p className="text-white font-bold">Banner Ad Your Product Here</p>
           </div>
         </div>
         <div className="text-gray-200 text-lg leading-relaxed whitespace-pre-line mb-10">
